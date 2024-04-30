@@ -1,0 +1,24 @@
+.guide{
+    background-image: linear-gradient(to top, green, white);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.head{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    height: 10cqh;
+}
+h1{
+    text-align: center;
+    color: green;
+    margin-top: 3cqh;
+}
+.head p{
+    margin-top: 5cqh;
+}
+.text{
+    margin-top: 8cqh;
+    margin-left: 15cqw;
+    margin-right: 10cqw;    
+}

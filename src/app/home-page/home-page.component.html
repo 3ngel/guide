@@ -1,0 +1,30 @@
+
+    <div class="picture">
+    </div>
+    <div class="all">
+        <div class="search">
+            <p>Поиск: </p>
+            <input type="text" name="search">
+        </div>
+        <table class="table">
+        <thead>
+            <tr>
+                <td>Заголовок статьи</td><td width="20%">Дата создания</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr routerLink="/guide" routerLinkActive="active" >
+                <td routerLink="/guide" routerLinkActive="active">Первая строка</td><td>2024-01-01</td>
+            </tr>
+            <tr [routerLink]="['/guide']" routerLinkActive="active">
+                <td >Вторая строка</td><td>2024-01-01</td>
+            </tr>
+            <tr [routerLink]="['/guide']" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <td >Третья строка</td><td>2024-01-01</td>
+            </tr>
+            <tr [routerLink]="['/guide']" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <td >Четвёртая строка</td><td>2024-01-01</td>
+            </tr>
+        </tbody>
+     </table>
+    </div>
