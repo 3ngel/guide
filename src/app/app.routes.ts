@@ -7,7 +7,7 @@ export const routes: Routes = [
     {path: '', component: HomePageComponent},
     // {path: '**', redirectTo: 'home'},
     {path: 'home', component: HomePageComponent},
-    {path: 'guide', component: PersonalPageComponent}
+    {path: 'guide/:name', component: PersonalPageComponent}
 ];
 @NgModule({
     imports:[

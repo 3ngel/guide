@@ -6,6 +6,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { SearchPipe } from './search.pipe';
+import { FormsModule } from '@angular/forms';
+// import {Pipe}
 
 
 
@@ -14,6 +17,7 @@ import { RouterModule } from '@angular/router';
     AppModule,
     HomePageComponent,
     PersonalPageComponent,    
+    SearchPipe,
   ],
   imports: [
     AppModule,
@@ -23,8 +27,11 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     HttpClientModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
-  bootstrap:[AppModule]
+  bootstrap:[AppModule],
+  providers: [SearchPipe], 
+  exports: [SearchPipe]
 })
 export class AppModule { }

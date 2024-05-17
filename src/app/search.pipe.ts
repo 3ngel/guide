@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
    @Pipe({
-     name: 'search'
+     name: 'panfilova',
    })
    export class SearchPipe implements PipeTransform {
         transform(value: any, arg?: any): any {
