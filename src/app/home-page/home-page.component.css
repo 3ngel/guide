@@ -37,7 +37,8 @@
     border-radius: 2cqh;
 }
 .all{
-    height: 70vh;
+    min-height: 70vh;
+    max-width: 100%;
     background: linear-gradient(white, rgb(25, 68, 150));
 }
 
@@ -47,6 +48,7 @@
     border-collapse: collapse;
     margin-left: 5cqw;
     color:rgb(25, 68, 150);
+    background-color: #D6EAF8;
 }
 
 .table thead{
