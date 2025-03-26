@@ -16,7 +16,7 @@ import { SearchPipe } from '../search.pipe';
 export class HomePageComponent implements OnInit {
   title = 'home-page';
   public searchText:any;
-  api_name = 'https://api.g-shamkhal.ru';
+  api_name = 'https://api.info-search.ru'; 
   data: any;
   lists = [{}as Guide];
   constructor(

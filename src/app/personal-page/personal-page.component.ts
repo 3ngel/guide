@@ -13,7 +13,7 @@ import { Guide } from '../requests';
 })
 export class PersonalPageComponent {
   title = 'persnal-page';
-  api_name ="https://api.g-shamkhal.ru";
+  api_name ='https://api.info-search.ru';
   subcribe:any;
   id:any;
   data:any;
