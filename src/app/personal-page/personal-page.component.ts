@@ -15,7 +15,7 @@ import { DataService } from '../data.service';
 })
 export class PersonalPageComponent {
   title = 'persnal-page';
-  api_name ='https://api.g-shamkhal.ru';
+  api_name ='https://info-search.ru';
   subcribe:any;
   id:any;
   data:any;
