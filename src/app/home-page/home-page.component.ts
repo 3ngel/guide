@@ -19,7 +19,7 @@ export class HomePageComponent implements OnInit {
   title = 'home-page';
   public search:any;
   public searchText:any;
-  api_name = 'https://info-search.ru';
+  api_name = 'https://api.info-search.ru';
   data: any;
   lists = [{}as Guide];
   constructor(
@@ -31,8 +31,6 @@ export class HomePageComponent implements OnInit {
     this.load();
   }
   async load(){
-    //this.lists = this.svc.datagive();
-    console.log(this.data);
     let method=this.api_name+"/GetArticles"
     let response = await fetch(method,{
       method: 'GET',

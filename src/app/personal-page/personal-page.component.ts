@@ -15,7 +15,7 @@ import { DataService } from '../data.service';
 })
 export class PersonalPageComponent {
   title = 'persnal-page';
-  api_name ='https://info-search.ru';
+  api_name ='https://api.info-search.ru';
   subcribe:any;
   id:any;
   data:any;
@@ -28,9 +28,6 @@ export class PersonalPageComponent {
     this.load();
   }
   async load(){
-    // let data: any = this.svc.datagive();
-    let guides:[]= this.svc.getguide(this.id);
-    this.guide = guides.find((c: Guide)=>{return c.id==this.id});
     let method=this.api_name+"/GetArticleById?id="+this.id;
     let response = await fetch(method,{
       method: 'GET',
