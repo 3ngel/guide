@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EnvironmentProviders, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Guide } from '../requests';
 import { SearchPipe } from '../search.pipe';
+import { environment } from '../../environments/environment';
+import { DataService } from '../data.service';
 
 
 @Component({
@@ -15,17 +17,22 @@ import { SearchPipe } from '../search.pipe';
 })
 export class HomePageComponent implements OnInit {
   title = 'home-page';
+  public search:any;
   public searchText:any;
-  api_name = 'https://api.g-shamkhal.ru';
+  api_name = 'https://info-search.ru';
   data: any;
   lists = [{}as Guide];
   constructor(
-    private route: Router
+    private route: Router,
+    private svc: DataService,
   ){}
   ngOnInit(): void {
+    this.searchText = "";
     this.load();
   }
   async load(){
+    //this.lists = this.svc.datagive();
+    console.log(this.data);
     let method=this.api_name+"/GetArticles"
     let response = await fetch(method,{
       method: 'GET',

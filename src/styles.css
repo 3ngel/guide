@@ -6,5 +6,16 @@
 }
 @font-face {
     font-family: 'Mont-Regular';
+    
     src: url('/src/assets/Mont-Regular.ttf') format('ttf');
+}
+footer{
+    height: 10vh;
+    width: 100%;
+    padding-left: 3cqw;
+    color: white;
+    /* background: rgb(25, 68, 150); */
+    position:fixed;
+    bottom: 2cqh;
+    /* background: linear-gradient(rgb(255 0 20), rgb(255 0 140), rgb(255, 235, 0), rgb(255, 143, 28)); */
 }

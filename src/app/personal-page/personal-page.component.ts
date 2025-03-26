@@ -1,8 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router, RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+import { ActivatedRoute, Data, Router, RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 import { PassThrough } from 'stream';
 import { Guide } from '../requests';
+import { environment } from '../../environments/environment';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'personal-page',
@@ -13,12 +15,12 @@ import { Guide } from '../requests';
 })
 export class PersonalPageComponent {
   title = 'persnal-page';
-  api_name ="https://api.g-shamkhal.ru";
+  api_name ='https://api.g-shamkhal.ru';
   subcribe:any;
   id:any;
   data:any;
-  public guide = {} as Guide;
-  constructor(private route: Router,  private acrout: ActivatedRoute){
+  public guide = {} as any;
+  constructor(private route: Router,  private acrout: ActivatedRoute, private svc: DataService){
     this.subcribe = this.acrout.params.subscribe(params=>this.id=params['name'])
   }
 
@@ -26,6 +28,9 @@ export class PersonalPageComponent {
     this.load();
   }
   async load(){
+    // let data: any = this.svc.datagive();
+    let guides:[]= this.svc.getguide(this.id);
+    this.guide = guides.find((c: Guide)=>{return c.id==this.id});
     let method=this.api_name+"/GetArticleById?id="+this.id;
     let response = await fetch(method,{
       method: 'GET',

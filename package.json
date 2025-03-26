@@ -9,6 +9,9 @@
     "test": "ng test",
     "serve:ssr:guide-app": "node dist/guide-app/server/server.mjs"
   },
+  "exports":{
+    ".":"./main.ts"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^17.2.0",

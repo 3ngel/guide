@@ -11,19 +11,35 @@
     width: 100%;
     height: 30vh;
     background: linear-gradient(transparent 10%,white),
-     url(../../img/phom.jpg);
+     url(../../assets/phom.jpg);
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
 }
 .all{
-    height: 70vh;
+    min-height: 70vh;
+    max-height: 100%;
     background: linear-gradient(white, rgb(25, 68, 150));
-    padding-left: 30%;
+    padding-left: 25cqw;
+    padding-right: 25cqw;
 }
-.text{
-    width: 50%;
+.text p{
+    width: 100%;
+    font-size: 2.5vh;
+    margin-top: 4cqh;
+    text-align: start;
+    
 }
 .text h1{
+    text-align: center;
+    margin-top: 2cqh;
     color: rgb(25, 68, 150);
+}
+@media (max-width: 745px){
+    .all{
+        padding-left: 15cqw;
+        padding-right: 15cqw;
+    }
+    .text p{font-size: 1.5vh;}
+    .text h1{font-size: 3cqh;}
 }
